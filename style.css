@@ -1,0 +1,139 @@
+/* Global styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styles */
+header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    margin-left: 200px;
+    color: black;
+}
+
+.site-menu {
+    margin-right: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .list-menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav .list-menu li {
+    margin: 0 10px;
+}
+
+nav .list-menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav .list-menu li a:hover {
+    color: #00b4d8;
+}
+
+/* Main content styles */
+main {
+    color: black;
+    margin-top: 300px;
+    flex: 1;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+
+.text {
+    width: 1000px;
+}
+
+.name {
+    font-size: 75px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.job {
+    color: #00b4d8;
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.description {
+    width: 800px;
+    color: black;
+    font-size: 18px;
+}
+
+/* Button styles */
+.button {
+    font-family: Arial, sans-serif;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific button colors */
+.linkedin {
+    background-color: #0077b5;
+}
+
+.github {
+    background-color: #333;
+}
+
+.resume {
+    background-color: #f44336;
+}
+
+/* Image styles */
+img {
+    height: 600px;
+}
+
+/* Footer styles */
+footer {
+    height: 100px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
