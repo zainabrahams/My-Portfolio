@@ -2,6 +2,8 @@
 html, body {
     height: 100%;
     margin: 0;
+    display: flex;
+    flex-direction: column; /* Ensure vertical layout */
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -9,35 +11,40 @@ body {
     background-color: white;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 /* Header styles */
 header {
-    height: 100px;
+    width: 100%;
+    height: auto;
     display: flex;
+    flex-wrap: wrap; /* Allows wrapping */
     justify-content: space-between;
     align-items: center;
+    padding: 20px 5%; /* Percentage padding for responsiveness */
+    box-sizing: border-box;
 }
 
 .site-title {
-    margin-left: 200px;
     color: black;
+    white-space: nowrap;
+    flex: 1; /* Allows it to grow and take available space */
 }
 
 .site-menu {
-    margin-right: 200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    flex-wrap: wrap; /* Allows wrapping */
 }
 
 nav .list-menu {
     list-style-type: none;
     display: flex;
     justify-content: center;
-}
-
-nav .list-menu li {
-    margin: 0 10px;
+    gap: 20px;
+    padding: 0;
+    flex-wrap: wrap; /* Allows items to wrap */
 }
 
 nav .list-menu li a {
@@ -55,21 +62,24 @@ nav .list-menu li a:hover {
 /* Main content styles */
 main {
     color: black;
-    margin-top: 300px;
-    flex: 1;
     display: flex;
-    gap: 100px;
+    gap: 300px;
     justify-content: center;
+    flex: 1;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
 }
 
 .text {
-    width: 1000px;
+    width: 500px;
+    max-width: 100%; /* Keep the original width until it gets smaller */
 }
 
 .name {
-    font-size: 75px;
+    font-size: 65px; /* Default font size */
     font-weight: bold;
     margin: 0;
+    white-space: nowrap; /* Prevent wrapping by default */
 }
 
 .job {
@@ -126,7 +136,8 @@ main {
 
 /* Image styles */
 img {
-    height: 600px;
+    height: 500px;
+    max-width: 100%;
 }
 
 /* Footer styles */
@@ -136,4 +147,80 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Responsive behavior */
+@media (max-width: 1024px) {
+    header {
+        padding: 20px 5%; /* Smaller padding for medium screens */
+    }
+
+    .site-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    nav .list-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px; /* Smaller gap for small screens */
+    }
+
+    .text {
+        width: 90%; /* Shrinks when the screen size reduces */
+    }
+
+    .description {
+        width: 90%;
+    }
+
+    img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    /* When the screen is smaller, allow the name to wrap */
+    .name {
+        white-space: normal; /* Allow wrapping */
+    }
+}
+
+@media (max-width: 768px) {
+    .name {
+        font-size: 50px;
+        white-space: normal; /* Allow wrapping */
+    }
+
+    .job {
+        font-size: 25px;
+    }
+
+    .description {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .site-title {
+        font-size: 24px;
+    }
+
+    nav .list-menu li {
+        margin: 5px 0;
+    }
+
+    .site-menu {
+        flex-direction: column;
+        align-items: center;
+    }
 }
