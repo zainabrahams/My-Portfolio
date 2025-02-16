@@ -3,7 +3,7 @@ html, body {
     height: 100%;
     margin: 0;
     display: flex;
-    flex-direction: column; /* Ensure vertical layout */
+    flex-direction: column;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -28,8 +28,12 @@ header {
 
 .site-title {
     color: black;
+    transition: color 0.3s ease;
     white-space: nowrap;
-    flex: 1; /* Allows it to grow and take available space */
+}
+
+.site-title:hover {
+    color: #00b4d8;
 }
 
 .site-menu {
@@ -76,7 +80,7 @@ main {
 }
 
 .name {
-    font-size: 65px; /* Default font size */
+    font-size: 65px;
     font-weight: bold;
     margin: 0;
     white-space: nowrap; /* Prevent wrapping by default */
@@ -223,4 +227,19 @@ footer {
         flex-direction: column;
         align-items: center;
     }
+}
+
+
+
+
+
+/* Projects */
+.placeholder {
+    font-size: 65px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.placeholder:hover {
+    color: #00b4d8;
 }
