@@ -26,13 +26,15 @@ header {
     box-sizing: border-box;
 }
 
-.site-title {
+.site-title a {
     color: black;
+    text-decoration: none;
+    cursor: pointer;
     transition: color 0.3s ease;
     white-space: nowrap;
 }
 
-.site-title:hover {
+.site-title:hover a {
     color: #00b4d8;
 }
 
@@ -64,12 +66,12 @@ nav .list-menu li a:hover {
 }
 
 /* Main content styles */
-main {
+main.home {
     color: black;
     display: flex;
-    gap: 300px;
     justify-content: center;
     flex: 1;
+    gap: 200px;
     align-items: center;
     flex-wrap: wrap; /* Allow wrapping on small screens */
 }
@@ -86,6 +88,25 @@ main {
     white-space: nowrap; /* Prevent wrapping by default */
 }
 
+.wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;        
+    animation-iteration-count: infinite;  
+    transform-origin: 70% 70%;       
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }  
+    100% { transform: rotate( 0.0deg) }
+  }
+
 .job {
     color: #00b4d8;
     margin: 0;
@@ -99,7 +120,6 @@ main {
     font-size: 18px;
 }
 
-/* Button styles */
 .button {
     font-family: Arial, sans-serif;
     padding: 8px 20px;
@@ -125,7 +145,6 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Specific button colors */
 .linkedin {
     background-color: #0077b5;
 }
@@ -138,10 +157,23 @@ main {
     background-color: #f44336;
 }
 
-/* Image styles */
 img {
     height: 500px;
     max-width: 100%;
+}
+
+#content {
+    opacity: 0;
+    animation: fadeInAnimation 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Footer styles */
@@ -149,11 +181,12 @@ footer {
     height: 100px;
     color: black;
     display: flex;
+    flex-shrink: 0;
     justify-content: center;
     align-items: center;
 }
 
-/* Responsive behavior */
+/* Home responsive behavior */
 @media (max-width: 1024px) {
     header {
         padding: 20px 5%; /* Smaller padding for medium screens */
@@ -229,14 +262,98 @@ footer {
     }
 }
 
+/* Experience main content styles */
+main.experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    background-image: url('./Images/Background.jpg'); /* Path to your image */
+    background-size: 40%; /* Ensures the image covers the entire screen */
+    background-repeat: no-repeat; /* Prevents repeating */
+}
 
+.skills-section, .education-section {
+    margin-bottom: 50px;
+}
 
+.section-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.cards-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows wrapping when screen is small */
+    justify-content: center; /* Centers cards when stacked */
+}
 
-/* Projects */
+@media (max-width: 768px) {
+    .cards-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards {
+        width: 90%; /* Take most of the screen width */
+        max-width: 400px; /* Prevents them from getting too wide */
+    }
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+li.card-desc {
+    margin-bottom: 10px; /* Adds space between each list item */
+}
+
+.cards {
+    background-color: #dee1e6;
+    color: black;
+    height: 300px;
+    width: 400px;
+    border-radius: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skills-card {
+    height: 225px;
+}
+
+.cards:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cards:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Projects styles */
+main.projects {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
 .placeholder {
     font-size: 65px;
     font-weight: bold;
+    cursor: pointer;
     transition: color 0.3s ease;
 }
 
