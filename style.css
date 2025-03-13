@@ -71,7 +71,7 @@ main.home {
     display: flex;
     justify-content: center;
     flex: 1;
-    gap: 200px;
+    gap: 300px;
     align-items: center;
     flex-wrap: wrap; /* Allow wrapping on small screens */
 }
