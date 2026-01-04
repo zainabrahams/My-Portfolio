@@ -1,32 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Projects</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Projects</title>
 </head>
-<body>
-    <header>
-        <h1 class="site-title"><a href="./index.html">
-            My Portfolio
-        </a></h1>
-        <div class="site-menu">
-            <nav>
-                <ul class="list-menu">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./experience.html">Experience</a></li>
-                    <li><a href="./projects.html">Projects</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main class="projects">
-        <p class="placeholder"> coming soon </p>
-        <img src="./Images/Placeholder.jpg">
-    </main>
-    <footer>
-        © 2025 Zain Abrahams. All Rights Reserved.
-    </footer>
+
+<body class="projects">
+  <header>
+    <h1 class="site-title">
+      <a href="./index.html">My Portfolio</a>
+    </h1>
+
+    <div class="site-menu">
+      <nav>
+        <ul class="list-menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./experience.html">Experience</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="exp-modern">
+    <!-- HERO -->
+    <section class="exp-hero">
+      <h1 class="exp-title">Projects</h1>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="exp-section">
+      <h2 class="exp-section-title">Featured Projects</h2>
+      <p class="exp-section-sub">Title • Description • Link • Skills</p>
+
+      <div class="exp-cards">
+        <!-- 1) CommHelpr -->
+        <article class="exp-card">
+          <h3>CommHelpr — GovHack 2025 Winner Project</h3>
+          <p class="t-date">GovHack • Open Data • “Using AI to help Australians navigate government services” Challenge Winner</p>
+
+          <p>
+            CommHelpr is an AI-powered civic platform that helps residents navigate government and community services.
+            It combines <strong>LocalLens</strong> (a real-time interactive map with emergency mode) and
+            <strong>LifeSignals</strong> (an AI assistant providing smart suggestions, plain-language guidance,
+            and scam protection), making services more accessible, intuitive, and trustworthy.
+          </p>
+
+          <p>
+            <a href="https://lauchlanblewitt.github.io/commhelpr-demo/" target="_blank" rel="noopener noreferrer">
+              View Project
+            </a>
+          </p>
+
+          <div class="exp-tags">
+            <span class="tag">User Experience (UX)</span>
+            <span class="tag">Project Planning</span>
+            <span class="tag">Coordination</span>
+            <span class="tag">Creative Problem Solving</span>
+            <span class="tag">Team Collaboration</span>
+            <span class="tag">LLM Concepts</span>
+          </div>
+        </article>
+
+        <!-- 2) RNN Sentiment Analysis -->
+        <article class="exp-card">
+          <h3>Reviews Sentiment Analysis with Recurrent Neural Networks</h3>
+          <p class="t-date">NLP • SimpleRNN • Model Evaluation</p>
+
+          <p>
+            Built an NLP sentiment classifier that cleans and tokenizes review text into sequences, then trains a
+            <strong>SimpleRNN</strong> model to predict sentiment.
+          </p>
+
+          <p>
+            The final model achieved <strong>84% test accuracy</strong>, but a key limitation was the dataset labelling:
+            sentiment was inferred from numeric ratings rather than manually annotated labels, introducing noise
+            (e.g., positive text with non-maximum ratings).
+          </p>
+
+          <p>
+            Originally, ratings <strong>≥ 3.5</strong> were labelled positive (72% test accuracy). Refining labels to
+            <strong>positive ≥ 4</strong> and <strong>negative ≤ 3</strong> improved test accuracy to <strong>84%</strong>,
+            showing earlier underperformance was largely due to inconsistent labels rather than model architecture.
+          </p>
+
+          <p>
+            <a href="https://github.com/zainabrahams/Sentiment-Analysis-with-RNN" target="_blank" rel="noopener noreferrer">
+              View on GitHub
+            </a>
+          </p>
+
+          <div class="exp-tags">
+            <span class="tag">Natural Language Processing (NLP)</span>
+            <span class="tag">Recurrent Neural Networks (RNN)</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">Python</span>
+            <span class="tag">pandas</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">sklearn</span>
+            <span class="tag">ML Workflow</span>
+            <span class="tag">Evaluation</span>
+          </div>
+        </article>
+
+        <!-- 3) Neural Network From Scratch -->
+        <article class="exp-card">
+          <h3>Neural Network Implementation from Scratch (Python &amp; NumPy)</h3>
+          <p class="t-date">MLP • Backpropagation • Fashion-MNIST</p>
+
+          <p>
+            Designed and implemented a fully connected three-layer Neural Network (MLP) entirely from scratch
+            (no deep learning frameworks). Implemented forward propagation, backpropagation, weight updates,
+            and loss calculation using only <strong>Python</strong> and <strong>NumPy</strong>.
+          </p>
+
+          <p>
+            Trained on the Fashion-MNIST dataset (70,000 grayscale images across 10 categories) and achieved a
+            peak <strong>87.65% test accuracy</strong>. Optimised performance using NumPy vectorisation (<code>np.dot</code>)
+            and built a full training pipeline with Mini-batch SGD and Sigmoid activation for stable convergence.
+          </p>
+
+          <p>
+            <a href="https://github.com/zainabrahams/Neural-Network-Implementation" target="_blank" rel="noopener noreferrer">
+              View on GitHub
+            </a>
+          </p>
+
+          <div class="exp-tags">
+            <span class="tag">Python</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">Feed-Forward Neural Networks (MLP)</span>
+            <span class="tag">Backpropagation</span>
+            <span class="tag">Gradient Descent</span>
+            <span class="tag">Model Evaluation</span>
+            <span class="tag">Vectorisation</span>
+          </div>
+        </article>
+
+        <!-- 4) Google Gemini Chatbot -->
+        <article class="exp-card">
+          <h3>Google Gemini Chatbot</h3>
+          <p class="t-date">Full-Stack • Flask API • LLM Integration</p>
+
+          <p>
+            Built a full-stack chat application with:
+          </p>
+          <ul>
+            <li><strong>Frontend:</strong> HTML, CSS, vanilla JavaScript (clean, responsive chat UI)</li>
+            <li><strong>Backend:</strong> Python Flask API (receives messages and returns AI responses)</li>
+            <li><strong>LLM Integration:</strong> Google Gemini API</li>
+          </ul>
+
+          <p>
+            Focused on UI design, modern LLM API integration, handling streaming responses, and cloud deployment (Render).
+            <strong>Note:</strong> the live demo link is currently disabled to prevent unintended usage of the Gemini API account.
+          </p>
+
+          <p>
+            <a href="https://github.com/zainabrahams/Chatbot" target="_blank" rel="noopener noreferrer">
+              View on GitHub
+            </a>
+          </p>
+
+          <div class="exp-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Flask</span>
+            <span class="tag">Google Gemini API</span>
+            <span class="tag">Large Language Models (LLM)</span>
+            <span class="tag">Frontend</span>
+            <span class="tag">Deployment</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Zain Abrahams. All Rights Reserved.
+  </footer>
 </body>
 </html>
